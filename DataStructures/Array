@@ -1,0 +1,59 @@
+What Are Arrays?
+Arrays are data structures that hold a fixed-size sequence of elements of the same type.
+
+Memory for array elements is allocated in contiguous blocks, allowing fast access via indexing.
+
+Indexing starts from 0 and allows direct access to elements using their position.
+
+Basic Array Operations:
+Reading: Accessing an element by its index is very fast—constant time, 
+O
+(
+1
+)
+O(1).
+
+Searching: To find a value, you must check each element one-by-one (linear search), which takes 
+O
+(
+n
+)
+O(n) time.
+
+Insertion at End: Adding a value at the end is simple and fast if space is available.
+
+Insertion in Middle: To insert at any position other than the end, all subsequent elements must be shifted, making it slower (
+O(n)
+O(n)).
+
+Deletion: Removing from the end is efficient; deleting from the middle requires shifting elements.
+
+Important Concepts:
+Fixed Size: In Java, arrays have a fixed size once created. Size cannot be changed during runtime.
+
+ArrayList: Java’s ArrayList provides a dynamic alternative—automatically resized as items are added or removed.
+
+ArrayList is backed by an array internally but hides complexity related to resizing.
+
+Key Takeaways for Arrays and ArrayLists:
+Use arrays for static, fixed-size data collections with frequent read/access scenarios.
+
+Use ArrayList when you need dynamic resizing or frequent insertion/deletion operations.
+
+Both enable fast random access via index, but dynamic arrays (ArrayLists) may internally copy/expand for large data operations.
+
+Practical Example (Java):
+java
+// Array
+int[] numbers = new int[5]; // Fixed size
+numbers[0] = 10;
+
+// ArrayList
+import java.util.ArrayList;
+ArrayList<Integer> numList = new ArrayList<>(); // Dynamic size
+numList.add(10); // Add elements
+numList.get(0);  // Access elements
+Learning Tip:
+Arrays are fundamental to understanding how data is organized for efficient access and manipulation. Grasp the difference between static (Array) and dynamic (ArrayList) collections to choose the right one as per your use case.
+
+You can revisit this section of the video any time for code demos and detailed visual explanations.
